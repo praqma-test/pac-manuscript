@@ -1,0 +1,15 @@
+:general:
+  date_template: "%Y-%m-%d"
+
+:templates:
+  - { location: /data/pac-templates/minimal.md, output: minimal-report.md }
+
+:task_systems:
+  -
+    :name: none
+    :regex:
+      - { pattern: '/(PAC-\d+)/', label: none }
+
+:vcs:
+  :type: git
+  :repo_location: '.'
