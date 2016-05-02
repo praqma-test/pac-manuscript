@@ -10,6 +10,7 @@
     :name: none
     :regex:
       - { pattern: '/(PAC-\d+)/', label: none }
+      - { pattern: '/(TODO-\d+)/', label: todo }
 
 :vcs:
   :type: git
