@@ -4,6 +4,7 @@
 :templates:
   - { location: /data/pac-templates/minimal.md, output: minimal-report.md }
   - { location: /data/pac-templates/html-minimal.html, output: html-minimal.html , pdf: true}
+  - { location: /data/pac-templates/jira.md, output: jira.md}
 
 :task_systems:
   -
@@ -11,6 +12,13 @@
     :regex:
       - { pattern: '/(PAC-\d+)/', label: none }
       - { pattern: '/(TODO-\d+)/', label: todo }
+  -
+    :name: jira
+    :regex:
+      - { pattern: '/(FAS-\d+)/', label: jira }        
+    :query_string: "http://localhost:28080/rest/api/latest/issue/#{task_id}"
+    :usr: 'admin'
+    :pw: 'admin'        		
 
 :vcs:
   :type: git
