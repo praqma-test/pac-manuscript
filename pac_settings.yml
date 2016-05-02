@@ -14,6 +14,7 @@
       - { pattern: '/(TODO-\d+)/', label: todo }
   -
     :name: jira
+    :debug: true
     :regex:
       - { pattern: '/(FAS-\d+)/', label: jira }        
     :query_string: "http://localhost:28080/rest/api/latest/issue/#{task_id}"
