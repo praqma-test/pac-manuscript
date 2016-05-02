@@ -1,0 +1,13 @@
+<html>
+	<head>
+		<title>PAC Changelog</title>
+	</head>
+	<body>
+		<h1>PAC Changelog</h1>
+		{% for task in tasks.none %}
+		<h3>{{task.task_id}}</h3>
+		<ul>{% for commit in task.commits %}
+			<li><em>{{commit.shortsha}}</em> : {{commit.header}}</li>{% endfor %} 		
+		</ul>{% endfor %}
+	</body>
+</html>
